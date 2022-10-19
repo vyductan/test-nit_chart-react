@@ -1,0 +1,20 @@
+// Select
+// ---
+@select-background: transparent;
+@select-border-color: #164b93;
+@select-item-selected-color: #32c5f4;
+@select-dropdown-font-size: 12px;
+@select-dropdown-vertical-padding: 3px;
+@select-dropdown-height: 21px;
+
+.@{select-prefix-cls} {
+  // ======================== Selection ========================
+  &-selection-item {
+    @apply text-xs text-[#32C5F4];
+  }
+  // ========================== Arrow ==========================
+  &-arrow {
+    @apply ~"text-[8px]" text-[#32C5F4];
+  }
+  // ========================== Popup ==========================
+}

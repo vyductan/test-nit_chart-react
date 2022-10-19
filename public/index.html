@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+    <base href="/" />
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="example" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>example</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      var serviceWorkerVersion = '3118366335';
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+  </head>
+
+  <body>
+    <script>
+      window.parent.addEventListener('message', handleMessage, false);
+      function handleMessage(e) {
+        if ('get_data' == e.data) {
+          let data = {
+            type: 6,
+            style: {
+              animation_duration: 1000,
+              background_color: [0, 0, 0],
+              background_opacity: 0.5,
+              domain_label: 'Domain',
+              // 'dot_radius': 3,
+              expand: true,
+              // 'size': {
+              //   'width': 800,
+              //   'height': 600,
+              // },
+              grid: true,
+              grid_color: [255, 255, 255],
+              grid_opacity: 0.3,
+              grid_width: 1,
+              label_style: {
+                color: [255, 255, 255],
+                font_size: 16,
+                font_weight: 400,
+              },
+              bar_outer_spacing: 50,
+              // 'bar_inner_spacing': 2,
+              // 'line_width': 1,
+              measure_label: 'Measure',
+              padding: 0,
+              // 'show_area': true,
+              // 'area_opacity': 0.1,
+            },
+            series: [
+              {
+                title: 'Bus',
+                color: [0, 255, 0], //green
+                opacity: 1,
+                spots: [
+                  {
+                    domain: 0,
+                    measure: 150,
+                  },
+                  {
+                    domain: 1,
+                    measure: 292,
+                  },
+                  {
+                    domain: 2,
+                    measure: 24,
+                  },
+                  {
+                    domain: 3,
+                    measure: 107,
+                  },
+                  {
+                    domain: 4,
+                    measure: 257,
+                  },
+                  {
+                    domain: 5,
+                    measure: 258,
+                  },
+                ],
+              },
+              {
+                title: 'Car',
+                color: [255, 0, 0], //red
+                opacity: 1,
+                spots: [
+                  {
+                    domain: 0,
+                    measure: 137,
+                  },
+                  {
+                    domain: 1,
+                    measure: 236,
+                  },
+                  {
+                    domain: 2,
+                    measure: 139,
+                  },
+                  {
+                    domain: 3,
+                    measure: 61,
+                  },
+                  {
+                    domain: 4,
+                    measure: 86,
+                  },
+                  {
+                    domain: 5,
+                    measure: 97,
+                  },
+                ],
+              },
+              {
+                title: 'Truck',
+                color: [0, 0, 255], //blue
+                opacity: 1,
+                spots: [
+                  {
+                    domain: 0,
+                    measure: 23,
+                  },
+                  {
+                    domain: 1,
+                    measure: 26,
+                  },
+                  {
+                    domain: 2,
+                    measure: 7,
+                  },
+                  {
+                    domain: 3,
+                    measure: 37,
+                  },
+                  {
+                    domain: 4,
+                    measure: 293,
+                  },
+                  {
+                    domain: 5,
+                    measure: 193,
+                  },
+                ],
+              },
+              {
+                title: 'Bike',
+                color: [0, 255, 255], //cyan
+                opacity: 1,
+                spots: [
+                  {
+                    domain: 0,
+                    measure: 118,
+                  },
+                  {
+                    domain: 1,
+                    measure: 288,
+                  },
+                  {
+                    domain: 2,
+                    measure: 220,
+                  },
+                  {
+                    domain: 3,
+                    measure: 49,
+                  },
+                  {
+                    domain: 4,
+                    measure: 300,
+                  },
+                  {
+                    domain: 5,
+                    measure: 284,
+                  },
+                ],
+              },
+            ],
+          };
+
+          window.parent.postMessage(JSON.stringify(data), '*');
+        }
+      }
+      window.addEventListener('load', function (ev) {
+        // Download main.dart.js
+        _flutter.loader
+          .loadEntrypoint({
+            serviceWorker: {
+              serviceWorkerVersion: serviceWorkerVersion,
+            },
+          })
+          .then(function (engineInitializer) {
+            return engineInitializer.initializeEngine();
+          })
+          .then(function (appRunner) {
+            return appRunner.runApp();
+          });
+      });
+    </script>
+  </body>
+</html>

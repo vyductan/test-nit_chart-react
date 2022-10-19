@@ -1,0 +1,24 @@
+// Segmented
+// ---
+@segmented-bg: transparent;
+@segmented-hover-bg: fade(@black, 6%);
+@segmented-selected-bg: #2178b3;
+@segmented-label-color: theme('textColor.primary');
+@segmented-label-hover-color: theme('colors.white');
+
+.@{segmented-prefix-cls} {
+  &-item {
+    @apply ~"rounded-[40px]" h-6 border border-primary px-3 py-1;
+    &-label {
+      @apply text-xs leading-4;
+    }
+  }
+  &-item + &-item {
+    @apply ml-4;
+  }
+
+  // thumb styles - animation
+  &-thumb {
+    @apply ~"rounded-[40px]" border border-primary;
+  }
+}

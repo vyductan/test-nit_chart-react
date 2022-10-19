@@ -1,0 +1,236 @@
+// Button
+.@{btn-prefix-cls}{
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  & > svg {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: -0.125em;
+  }
+  & > svg + span {
+    margin-left: 8px;
+  }
+  &.action{
+    background-color: @link-color;
+    color: #fff;
+    // &:hover{
+    //   background-color: @link-hover-color;
+    //   border-color: @link-hover-color;
+    // }
+  }
+  &.danger{
+    background-color: @error-color;
+    color: #fff;
+    // &:hover{
+    //   background-color: @link-hover-color;
+    //   border-color: @link-hover-color;
+    // }
+  }
+
+  &.light{
+    border: 0;
+    color: @text-color;
+    background-color: @text-bg;
+    &:hover{
+      color: white;
+      background-color: @text-bg-hover;
+    }
+
+    &.warning{
+      color: @orange-6;
+    background-color: @orange-1;
+    &:hover {
+      color: white;
+      background-color: @orange-6;
+    }
+    }
+  }
+  &.light.action{
+    color: @blue-6;
+    background-color: @blue-1;
+    &:hover {
+      color: white;
+      background-color: @blue-6;
+      .@{spin-prefix-cls}-dot-item {
+        background-color: white;
+      }
+    }
+  }
+  &.light.danger {
+    color: @red-6;
+    background-color: @red-1;
+    &:hover{
+      color: white;
+      background-color: @red-6;
+    }
+  }
+  &.light.positive{
+    color: @green-6;
+    background-color: @green-1;
+    &:hover {
+      color: white;
+      background-color: @green-6;
+    }
+  }
+
+  &.ghost{
+    border:0;
+    background-color: transparent;
+    box-shadow: none;
+
+    color: @text-color;
+    &:hover{
+      color: white;
+      background-color: @text-color;
+    }
+
+    &.action{
+      color: @link-color;
+      &:hover{
+        color: white;
+        background-color: @link-color;
+      }
+    }
+    &.positive{
+      color: @green-6;
+      &:hover {
+        color: white;
+        background-color: @green-6;
+      }
+    }
+    &.danger{
+      color: @red-6;
+      &:hover{
+        color: white;
+        background-color: @red-6;
+      }
+    }
+    &.warning{
+      color: @orange-6;
+      &:hover{
+        color: white;
+        background-color: @orange-6;
+      }
+    }
+    
+  }
+}
+
+
+// Card
+// --
+.@{card-prefix-cls} {
+  &.footer-custom &-actions {
+    li {
+     margin: 0;
+     background-color: @table-body-sort-bg;
+     color: @text-color;
+     span{
+       &:hover {
+       cursor: default;
+       color: initial;
+      }
+      a:not(.ant-btn){
+        color: @link-color;
+        &:hover{
+          color:@link-hover-color;
+        } 
+      }
+     }
+    }
+  }
+}
+
+// Dropdown
+// --
+.@{dropdown-prefix-cls} {
+  &-menu {
+    &-item {
+      &-disabled {
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+// Form
+// --
+.@{form-prefix-cls} {
+  // color: inherit;
+  // &-item {
+  //   color: inherit;
+  // }
+  &-item-label {
+    font-weight: 500;
+  }
+
+  // &-horizontal &-item-label {
+  //   height: 46px;
+  // }
+}
+
+// Checkbox
+// --
+// .@{ant-prefix}-checkbox{
+//   &-wrapper-in-form-item {
+//         span {
+//           font-weight: 600;
+//         }
+//       }
+// }
+
+// Descriptions
+// ---
+// .@{descriptions-prefix-cls}{
+//   &-item-label{
+//     font-size: 16px;
+//     // font-weight: 600;
+//   }
+//   &-item-content{
+//     font-size: 16px;
+//   }
+// }
+
+// List
+// ---
+.@{list-prefix-cls}.min-h-base {
+    .@{ant-prefix}-spin-container {
+      min-height: 350px;
+    }
+}
+
+// Menu
+.@{menu-prefix-cls} {
+  &-sub&-inline {
+    background-color: white;
+  }
+}
+
+// Modal
+// --
+// fixed height modal
+.@{dialog-prefix-cls} {
+  &-body {
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+}
+
+// Table
+// --
+.@{table-prefix-cls} {
+  &-column-has-sorters.icon-sort-center {
+    .@{table-prefix-cls}-column-sorters{
+      justify-content: center;
+    }
+    .@{table-prefix-cls}-column-title{
+      display: none;
+    }
+    .@{table-prefix-cls}-column-sorter{
+      margin-left: 0;
+    }
+  }
+}
